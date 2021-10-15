@@ -1,5 +1,56 @@
 .container {
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  color: #fff;
   background: rgb(24, 24, 58);
+}
+.header {
+  position: relative;
+  height: 0.260417rem;
+  line-height: 0.260417rem;
+
+  h1 {
+    color: #fff;
+    font-size: 0.197917rem;
+    line-height: 0.416667rem;
+    text-align: center;
+  }
+  .show_time {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.520833rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.09375rem;
+    line-height: 0.260417rem;
+  }
+}
+
+.main {
+  display: flex;
+  // 防止内容图片在无限缩小时看不清
+  min-width: 1024px;
+  // 保证内容图片无限放大时不失真
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0.104167rem;
+  font-size: 0.114583rem;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .left {
+    flex: 3;
+  }
+  .center {
+    flex: 5;
+  }
+  .right {
+    flex: 3;
+  }
+  .item {
+    height: 1.5625rem;
+    margin: 0.052083rem;
+    border: 1px solid #fff;
+  }
 }
